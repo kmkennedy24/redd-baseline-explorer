@@ -30,7 +30,7 @@ Acre is a state in the western Brazilian Amazon, bordering Peru and Bolivia. SIS
 5. **Carbon conversion** — Avoided/excess hectares converted to tCO2e using [WHRC pantropical aboveground biomass density](https://developers.google.com/earth-engine/datasets/catalog/WHRC_biomass_tropical), the standard 0.47 carbon fraction, and the 44/12 CO2:C ratio. Actual-emissions estimates use pixel-level biomass at realized loss locations; counterfactual emissions use mean regional biomass density, since no real pixel locations exist for a hypothetical scenario.
 6. **Independent check** — Hansen-derived annual loss compared against [INPE's PRODES](https://terrabrasilis.dpi.inpe.br/) official annual deforestation rates for Acre, Brazil's own reported figures for the region.
 
-Full step-by-step detail, code, and all intermediate charts are in [`notebooks/acre_redd_analysis.ipynb`](notebooks/acre_redd_analysis.ipynb).
+Full step-by-step detail and all charts are in [`analysis/ANALYSIS.md`](analysis/ANALYSIS.md). The actual implementation is in [`scripts/acre_redd_baseline.js`](scripts/acre_redd_baseline.js), written and run in the Google Earth Engine Code Editor (JavaScript) 
 
 ## Repository structure
 
@@ -41,8 +41,24 @@ redd-baseline-explorer/
 ├── LICENSE
 ├── scripts/
 │   └── acre_redd_baseline.js       # documented Google Earth Engine script
-├── notebooks/
-│   └── acre_redd_analysis.ipynb    # full analysis, all charts, discussion
+## Repository structure
+ 
+```
+redd-baseline-explorer/
+├── README.md
+├── REFERENCES.md
+├── LICENSE
+├── scripts/
+│   └── acre_redd_baseline.js       # documented Google Earth Engine script (JavaScript)
+├── analysis/
+│   └── ANALYSIS.md                 # full write-up: methodology, findings, discussion
+├── data/
+│   └── exported_csvs/              # annual loss, baseline, buffer tables (from GEE exports)
+└── figures/
+    ├── additionality_plot.png
+    ├── acre_deforestation_pattern.png
+    └── acre_vs_buffer_loss.png
+```
 ├── data/
 │   └── exported_csvs/              # annual loss, baseline, buffer tables (from GEE exports)
 └── figures/
@@ -56,8 +72,8 @@ The Earth Engine portion requires a free [Google Earth Engine](https://earthengi
 
 - **Live script:** [Get Link URL here](https://code.earthengine.google.com/b7c2dcdefb069838bf5b12023edf46d8)
 
-Running it end-to-end exports the annual loss, baseline, and buffer CSVs to Google Drive. The notebook in `notebooks/` consumes those CSVs to produce the final figures — it is not a one-command reproduction, since the GEE step requires manual execution and export.
-
+Running it end-to-end exports the annual loss, baseline, and buffer CSVs to Google Drive, and prints/charts the key results directly in the Code Editor console. The figures in `figures/` and the write-up in `analysis/ANALYSIS.md` were produced from those exports — this is not a one-command reproduction, since the GEE step requires manual execution and export, and there is no Python/notebook pipeline to run afterward.
+ 
 ## Limitations
 
 This is a deliberately simplified, illustrative model. Specific known limitations:
