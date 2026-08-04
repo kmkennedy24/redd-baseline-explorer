@@ -49,7 +49,6 @@ redd-baseline-explorer/
     ├── additionality_plot.png
     ├── acre_deforestation_pattern.png
     └── acre_vs_buffer_loss.png
-```
 ├── data/
 │   └── exported_csvs/              # annual loss, baseline, buffer tables (from GEE exports)
 └── figures/
