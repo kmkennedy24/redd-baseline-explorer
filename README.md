@@ -84,6 +84,4 @@ A more rigorous version of this project would include: a statistically matched c
 
 See [`REFERENCES.md`](REFERENCES.md) for full citations (Hansen GFC, PRODES/INPE, WHRC biomass, FAO GAUL, CIFOR's SISA case report, VCS VM0007).
 
-## License
 
-[MIT](LICENSE)
