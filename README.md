@@ -40,15 +40,6 @@ redd-baseline-explorer/
 ├── REFERENCES.md
 ├── LICENSE
 ├── scripts/
-│   └── acre_redd_baseline.js       # documented Google Earth Engine script
-## Repository structure
- 
-```
-redd-baseline-explorer/
-├── README.md
-├── REFERENCES.md
-├── LICENSE
-├── scripts/
 │   └── acre_redd_baseline.js       # documented Google Earth Engine script (JavaScript)
 ├── analysis/
 │   └── ANALYSIS.md                 # full write-up: methodology, findings, discussion
